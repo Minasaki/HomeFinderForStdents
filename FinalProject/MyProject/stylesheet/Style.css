@@ -1,0 +1,123 @@
+body {
+    background-image: url('/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+table {
+    table-layout: auto;
+    text-align: left;
+}
+.log {
+    width: 30%;
+    margin: .5%;
+}
+.banner {
+    background-color: lightblue;
+    color: blue;
+    font-weight: bolder;
+    font-size: 300%;
+    margin: 1% auto;
+    text-align: center;
+}
+.little-banner {
+    background-color: lightblue;
+    color: blue;
+    font-weight: bolder;
+    font-size: 200%;
+    margin: 1% auto;
+    text-align: center;
+}
+#warning {
+    background-color: pink;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 3% auto;
+    ;
+}
+.text-info {
+    color: blue;
+    font-weight: 100;
+}
+.text-info-user {
+    color: orange;
+    font-weight: 100;
+}
+.login-container {
+    width: 50%;
+    margin: 0px auto;
+    box-shadow: 5px 5px 15px peru;
+}
+.home-container {
+    width: 80%;
+    margin: 0px auto;
+    box-shadow: 5px 5px 15px peru;
+}
+.textfield {
+    border-style: none;
+    border-bottom-style: ridge;
+    background-color: transparent;
+    width: 120%;
+    height: 170%;
+    color: black;
+}
+.textfield:focus {
+    border-style: double;
+    border-bottom-style: ridge;
+    background-color: white;
+    width: 120%;
+    height: 170%;
+    color: black;
+}
+.btn {
+    height: 40px;
+    border-style: double;
+    border-radius: 7px;
+    margin: .45%;
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #1a47d0;
+}
+.btn-warning {
+    background-color: rgb(236, 67, 19);
+}
+.btn-default {
+    background-color: #eaddce;
+}
+.btn-info {
+    background-color: #0377dc;
+}
+.table-row {
+    display: table-row;
+    padding: 1%;
+}
+.single-img {
+    margin: 2%;
+    width: 70%;
+}
+.data {
+    margin: 1%;
+    padding: 1%;
+}
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 20%;
+}
+.clearfix {
+    clear: both;
+}
+div.img:hover {
+    border: 1px solid #777;
+}
+div.img img {
+    width: 100%;
+    height: auto;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}

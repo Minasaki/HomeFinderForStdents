@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Advertise my BoardingHouse</title>
+    <link rel="stylesheet" href="/style.css" media="screen">
+    <script type="text/javascript" src="/advertise_ajax.js"></script>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="/logo.jpg" alt="logo" />
+  </div>
+    {% if token %}
+    <input type="hidden" id="sessionId" value="{{ token }}">
+    {% endif %}
+    <div class="banner">
+        Advertise your own home for student
+    </div>
+    <div class="login-container">
+        <h3><div id="warning"></div></h3>
+        <center>
+            <table cellspacing="10" cellpadding="10">
+                <tbody>
+                    <tr>
+                        <td>
+                            Sample Photo
+                        </td>
+                        <td>
+                            <input class="btn-default" type="file" id="myfile" value="Add Photo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="hidden" id="photoName" value="">
+                        </td>
+                        <td>
+                            <input class="btn btn-info" type="button" id="upload" value="upload">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+
+        <form id="avertiseForm" method="post">
+            <center>
+                <table cellspacing="10" cellpadding="10">
+                    <tr>
+                        <td>
+                            Establishment Name:
+                        </td>
+                        <td>
+                            <input class="textfield" id="name" type="text" placeholder="Boarding House Name Here!!!" required="true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Location:
+                        </td>
+                        <td>
+                            <input class="textfield" id="location" type="text" placeholder="Type Here!!!" required="true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Number of Rooms:
+                        </td>
+                        <td>
+                            <input class="textfield" type="number" id="numberOfRoom" placeholder="Type Here!!!" required="true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Number of Available Room:
+                        </td>
+                        <td>
+                            <input class="textfield" type="number" id="availableRoom" placeholder="Type Here!!!" required="true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            <textarea id="description" rows="4" cols="25" placeholder="Description Here!!!" required="true"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- For Indention -->
+                        </td>
+                        <td>
+                            <input class="btn btn-primary" type="submit" value="Advertise">
+                            <input class="btn btn-warning" type="reset" value="Reset Field">
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>More Details</title>
+    <link rel="stylesheet" href="/style.css" media="screen">
+    <script type="text/javascript" src="/post_ajax.js"></script>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/logo.jpg" alt="logo" />
+    </div>
+    <div class="banner">
+        Inquire for more information
+    </div>
+    <input type="hidden" id="homeId" value="{{ data._id.toString() }}">
+    <div class="login-container">
+        <center>
+            <img class="single-img" src="/public/images/{{ data.samplePhoto }}" alt="HouseImage" />
+            <p>
+                {{ data.description }}
+            </p>
+        </center>
+        <div class="data">
+            <ul>
+                <li><b>Owner Name:</b> {{ data.name }}</li>
+                <li><b>Establishment Location:</b> {{ data.location }}</li>
+                <li><b>Number Of Rooms:</b> {{ data.numberOfRooms }}</li>
+                <li><b>Available Rooms:</b> {{ data.numberOfAvailableRoom }}</li>
+            </ul>
+        </div>
+        <p>
+            <h3><u>For Inquiry:</u></h3> Please Contact
+            <br> {{ data.user.name }} @ {{ data.user.email }} or
+            <br> call and text in {{ data.user.mobilenumber }}
+            <br>
+            <br>
+        </p>
+        <div class="little-banner">
+            Say something to the user
+        </div>
+        <center>
+            <table>
+                <thead>
+                    <th>Date/Time</th>
+                    <th>User</th>
+                    <th>Comment</th>
+                </thead>
+                <tbody id="showMessage"></tbody>
+            </table>
+        </center>
+        <div class="container">
+            <center>
+                <form role="form" id="messageForm" method="post">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Username:</td>
+                                {% if token %}
+                                <td>
+                                    <input class="profile-name" id="username" type="text" required="true" value="{{ data.user.name }}" disabled="true" />
+                                </td>
+                                {% endif %} {% if !token %}
+                                <td>
+                                    <input class="profile-name" id="username" type="text" required="true" />
+                                </td>
+                                {% endif %}
+                            </tr>
+                            <tr>
+                                <td>Comment </td>
+                                <td>
+                                    <input id="message" type="text" name="comment" required="true">
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-primary">SEND</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </center>
+        </div>
+        <br>
+    </div>
+</body>
+
+</html>

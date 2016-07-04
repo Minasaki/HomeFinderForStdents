@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/style.css" media="screen">
+    <script type="text/javascript" src="/registration_ajax.js"></script>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/logo.jpg" alt="logo" />
+    </div>
+    <div class="banner">
+        Registration Form
+    </div>
+    <div class="login-container">
+        <h3><div id="warning"></div></h3>
+        <center>
+            <table cellspacing="10" cellpadding="10">
+                <tr>
+                    <td>
+                        Full Name:
+                    </td>
+                    <td>
+                        <input class="textfield" type="text" id="name" placeholder="Type Your Fullname Here!!!" required="true">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        <input class="textfield" type="text" id="address" placeholder="Type Your Address Here!!!" required="true">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <input class="textfield" type="email" id="email" placeholder="Type Your Email Here!!!" required="true">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mobile Number:
+                    </td>
+                    <td>
+                        <input class="textfield" type="text" id="mobileNumber" placeholder="Type Your Mobile Number Here!!!" required="true">
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td>
+                            Username:
+                        </td>
+                        <td>
+                            <input class="textfield" type="text" id="username" placeholder="Type Your Username Here!!!" required="true">
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>
+                            Password:
+                        </td>
+                        <td>
+                            <input class="textfield" type="password" id="password" placeholder="Type Your password Here!!!" required="true">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- For Indention -->
+                        </td>
+                        <td>
+                            <input class="btn btn-primary" type="button" id="registrationButton" value="REGISTER">
+                        </td>
+                    </tr>
+            </table>
+        </center>
+    </div>
+</body>
+
+</html>

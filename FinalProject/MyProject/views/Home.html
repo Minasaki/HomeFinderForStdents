@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css" media="screen">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/logo.jpg" alt="logo" />
+    </div>
+    <div class="banner">
+        Available Homes For You
+    </div>
+    <center>
+        {% if token %}
+        <a href="/boarding_house/own?session_id={{ token }}">
+          <input class="btn btn-primary" type="button" name="name" value="My Home">
+        </a>
+        <a href="/boarding_house?session_id={{ token }}">
+            <input class="btn btn-warning" type="button" value="Advertise">
+        </a>
+        <a href="/logged_out">
+            <input class="btn btn-primary" type="button" value="Log Out">
+        </a>
+        <br>
+        <h2>Welcome {{ user.name }}</h2> {% endif %}
+    </center>
+    {% if !token %}
+    <center>
+        <a href="/login">
+            <input class="btn btn-primary" type="button" value="Log In">
+        </a>
+    </center>
+    {% endif %}
+    <div class="home-container">
+        <center>
+          {% if homes %}
+            {% for home in homes %}
+            <div class="img" onclick="window.location.href = '/home/more_details?id={{ home._id.toString() }}&session_id={{ token }}'">
+                <img src="/public/images/{{ home.samplePhoto }}" alt="asdasdas" />
+                <div class="desc">{{ home.description }}</div>
+            </div>
+            {% endfor %}{% endif %}
+            {% if homes == null %}
+           <h3>No available homes right now, check back later! T_T</h3>
+           {% endif %}
+            <div class="clearfix"></div>
+        </center>
+    </div>
+</body>
+
+</html>
